@@ -1,0 +1,255 @@
+#terms, #privacy, #help, #bar4, #bar3, #bar2, #bar1, #grid, #avatar, #logo {
+  justify-self: center;
+  align-self: center;
+}
+
+html body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#tl6, #tl5, #tl4, #tl3, #tl2, #tl1, #adv {
+  align-self: center;
+  justify-self: start;
+  margin-left: 50px;
+  font-family: arial, sans-serif;
+}
+
+input {
+  border-radius: 1px;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  font-size: 13px;
+  height: 25px;
+  padding: 1px 8px;
+  width: 390px;
+}
+
+#main, #top2, #top {
+  display: grid;
+  grid-template-columns: 200px 500px 1fr 50px 50px 50px 50px;
+  grid-template-rows: 60px;
+}
+
+#tr6, #tr5, #tr4, #tr3, #tr2, #tr1 {
+  justify-self: start;
+  align-self: center;
+  font-family: arial, sans-serif;
+  font-size: 10px;
+}
+
+#tl6, #tl5, #tl4, #tl3, #tl2 {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+#top {
+  grid-template-areas: "logo . . home b grid avatar";
+  background-color: #f1f1f1;
+  background-size: 100%;
+}
+
+#logo {
+  grid-area: logo;
+  height: 30px;
+  justify-self: start;
+  padding-left: 20px;
+}
+
+#avatar {
+  grid-area: avatar;
+  border-radius: 50%;
+}
+
+#grid {
+  grid-area: grid;
+  height: 33px;
+}
+
+#top2 {
+  grid-template-areas: "text . . . .";
+}
+
+#adv {
+  grid-area: text;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 20px;
+  text-decoration: none;
+  text-decoration-style: solid;
+  color: #d93025;
+}
+
+#main {
+  grid-template-rows: 40px 40px 40px 40px 40px 40px 40px;
+  grid-template-areas: "a . b . ." "c d e . ." "f g h . ." "i j k . ." "l m n . ." "o p q . ." ". s . . .";
+}
+
+#tl1 {
+  grid-area: a;
+}
+
+#tl2 {
+  grid-area: c;
+}
+
+#tl3 {
+  grid-area: f;
+}
+
+#tl4 {
+  grid-area: i;
+}
+
+#tl5 {
+  grid-area: l;
+}
+
+#tl6 {
+  grid-area: o;
+}
+
+#tr1 {
+  grid-area: b;
+  font-weight: bold;
+  color: grey;
+  font-size: 16px;
+}
+
+#tr2 {
+  grid-area: e;
+  color: grey;
+}
+
+#tr3 {
+  grid-area: h;
+  color: grey;
+}
+
+#tr4 {
+  grid-area: k;
+  color: grey;
+}
+
+#tr5 {
+  grid-area: n;
+  color: grey;
+}
+
+#tr6 {
+  grid-area: q;
+  color: grey;
+}
+
+#bar1 {
+  grid-area: d;
+}
+
+#bar2 {
+  grid-area: g;
+}
+
+#bar3 {
+  grid-area: j;
+}
+
+#bar4 {
+  grid-area: m;
+}
+
+#bar5 {
+  display: flex;
+  grid-area: p;
+  width: 150px;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#search {
+  grid-area: s;
+  appearance: push-button;
+  text-align: center;
+  cursor: default;
+  color: -internal-light-dark(buttontext, #aaaaaa);
+  background-color: -internal-light-dark(#efefef, #4a4a4a);
+  box-sizing: border-box;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(#767676, #c3c3c3);
+  border-image: initial;
+  height: 30px;
+  width: 120px;
+  align-self: center;
+  justify-self: end;
+  margin-right: 46px;
+  background-color: #4d90fe;
+  border: 1px solid #3079ed;
+  color: #fff;
+  background-color: #4d90fe;
+  background-image: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+}
+
+@media only screen and (max-width: 900px) and (min-width: 480px) {
+  .icon {
+    display: none;
+  }
+
+  .main-container {
+    padding-bottom: 50px;
+    /* height of your footer */
+  }
+}
+input:focus {
+  border: 1px solid red;
+  box-shadow: 0 0 10px #4d90fe;
+  color: black;
+}
+
+#footer {
+  display: grid;
+  bottom: 0;
+  position: absolute;
+  border-top: 1px solid #e4e4e4;
+  background: #f2f2f2;
+  line-height: 40px;
+  font-size: 14px;
+  grid-template-areas: "Help Privacy Term .";
+  grid-template-columns: 50px 50px 50px 1fr;
+  grid-template-rows: 50px;
+  min-width: 100%;
+  color: #5f6368;
+}
+
+p a {
+  ont-family: arial, sans-serif;
+}
+
+#help {
+  grid-area: Help;
+}
+
+#privacy {
+  grid-area: Privacy;
+}
+
+#terms {
+  grid-area: Term;
+}
+
+.main-container {
+  min-height: 100vh;
+  /* will cover the 100% of viewport */
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style2.css.map */

@@ -1,0 +1,300 @@
+%align{
+	justify-self: center;
+    align-self: center;
+}
+
+html body{
+	height: 100%;
+	min-height: 100%;
+	margin:0;
+ 	padding:0;
+ 	position: relative;
+}
+
+%left{
+  	align-self:center;
+	justify-self: start;
+  	margin-left:50px;
+  	font-family:arial,sans-serif;
+}
+
+input{
+	border-radius: 1px;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    font-size: 13px;
+    height: 25px;
+    padding: 1px 8px;
+    width:390px;    
+}
+
+
+
+%g {
+	display: grid;
+	grid-template-columns:200px 500px 1fr 50px 50px 50px 50px;
+	grid-template-rows:60px;
+}
+
+%right{
+	justify-self: start;
+	align-self:center;
+	font-family: arial,sans-serif;
+	font-size: 10px;
+}
+
+%font{
+	font-size: 13px;
+    line-height: 16px;
+}
+
+#top{
+	@extend %g;
+    grid-template-areas:
+    "logo . . home b grid avatar";
+	background-color: #f1f1f1;
+	background-size: 100%;
+}
+
+
+#logo{
+
+  grid-area:logo;
+  height:30px;
+  @extend %align;
+  justify-self: start;
+   padding-left:20px;
+	
+}
+
+#avatar{
+	
+	grid-area:avatar;
+	@extend %align;
+	border-radius:50%;
+}
+
+#grid{
+
+	grid-area:grid;
+	@extend %align;
+	height:33px;
+	
+}
+
+
+#top2{
+	@extend %g;
+	grid-template-areas:
+	"text . . . .";
+}
+
+#adv{
+	grid-area:text;
+	font-weight: inherit;
+    font-style: inherit;
+    font-size: 20px;
+    @extend %left;
+    text-decoration: none;
+    text-decoration-style:solid;
+        color: #d93025;
+
+
+}
+
+#main{
+	@extend %g;
+
+	grid-template-rows: 40px 40px 40px 40px 40px 40px 40px;
+	grid-template-areas: 
+	"a . b . ."
+	"c d e . ."
+	"f g h . ."
+	"i j k . ."
+	"l m n . ."
+	"o p q . ."
+	". s . . ."
+	;
+}
+
+#tl1{
+	grid-area: a;
+	 @extend %left;
+}
+#tl2{
+	grid-area: c;
+	@extend %left, %font;
+}
+#tl3{
+	grid-area: f;
+	 @extend %left, %font;
+}
+#tl4{
+	grid-area: i;
+	 @extend %left, %font;
+}
+#tl5{
+	grid-area: l;
+	 @extend %left, %font;
+}
+#tl6{
+	grid-area: o;
+	 @extend %left, %font;
+}
+
+
+#tr1{
+	grid-area: b;
+	@extend %right;
+	font-weight: bold; 
+	color: grey;
+	font-size: 16px;
+}
+#tr2{
+	grid-area: e;
+	@extend %right; 
+	color: grey;
+}
+#tr3{
+	grid-area: h;
+	@extend %right; 
+	color: grey;
+}
+#tr4{
+	grid-area: k;
+	@extend %right; 
+	color: grey;
+}
+#tr5{
+	grid-area: n;
+	@extend %right; 
+	color: grey;
+}
+#tr6{
+	grid-area: q;
+	@extend %right; 
+	color: grey;
+}
+
+#bar1{
+	@extend %align;
+	grid-area:d;
+}
+#bar2{
+	@extend %align;
+	grid-area:g;
+}
+
+#bar3{
+	@extend %align;
+	grid-area:j;
+}
+
+#bar4{
+	@extend %align;
+	grid-area:m;
+}
+
+#bar5{
+	display:flex;
+	grid-area:p;
+	width: 150px; 
+	justify-self: center;
+    align-self: center;
+    justify-content: center;
+    margin-top:10px;
+}
+
+#search{
+	grid-area: s;
+	appearance: push-button;
+    text-align: center;
+    cursor: default;
+    color: -internal-light-dark(buttontext, rgb(170, 170, 170));
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(74, 74, 74));
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+    height:30px;
+    width:120px;
+    align-self: center;
+    justify-self: end;
+    margin-right: 46px;
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+    color: #fff;
+    background-color: #4d90fe;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+
+}
+
+
+
+
+@media only screen and (max-width: 900px) and (min-width: 480px)
+{
+    .icon{ 
+    	display:none; 
+    } // 12 px
+
+    .main-container {
+ 		padding-bottom: 50px; /* height of your footer */
+	}
+
+}
+
+input:focus{
+	border:1px solid red;
+    box-shadow: 0 0 10px #4d90fe;
+    color:black;
+
+}
+
+
+#footer{
+	display:grid;
+	bottom: 0;
+	position: absolute;
+	border-top: 1px solid #e4e4e4;
+	background: #f2f2f2;
+    line-height: 40px;
+    font-size: 14px;
+    grid-template-areas:
+    "Help Privacy Term .";
+    grid-template-columns: 50px 50px 50px 1fr ;
+    grid-template-rows: 50px;
+	min-width:100%;
+	color:#5f6368;;
+}
+
+p a{
+	ont-family: arial,sans-serif;
+}
+
+#help{
+	@extend %align;
+	grid-area:Help;
+}
+#privacy{
+	@extend %align;
+	grid-area:Privacy;
+}
+
+#terms{
+	@extend %align;
+	grid-area:Term;
+}
+
+
+
+.main-container {
+ 	min-height: 100vh; /* will cover the 100% of viewport */
+ 	overflow: hidden;
+}
+a{
+    text-decoration: none;
+    
+}

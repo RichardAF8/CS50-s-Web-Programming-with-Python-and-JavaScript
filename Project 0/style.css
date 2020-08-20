@@ -1,0 +1,190 @@
+#terms, #set, #priv, #how, #bus, #adv, #search, .logo, #logo, #avatar, #images, #gmail, #store, #about, #grid {
+  justify-self: center;
+  align-self: center;
+}
+
+html body {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#top {
+  display: grid;
+  grid-template-columns: 50px 50px 1fr 50px 50px 50px 50px;
+  grid-template-rows: 50px;
+  grid-template-areas: "about store . gmail images grid avatar";
+}
+
+#grid {
+  grid-area: grid;
+}
+
+#about {
+  grid-area: about;
+}
+
+#store {
+  grid-area: store;
+}
+
+#gmail {
+  grid-area: gmail;
+}
+
+#images {
+  grid-area: images;
+}
+
+#avatar {
+  grid-area: avatar;
+  border-radius: 50%;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 100px 0.25fr 0.5fr 0.25fr 200px;
+  grid-template-rows: 250px 80px 58px;
+  grid-template-areas: ". . logo . . " ". . search . ." ". . b . .";
+}
+
+#button {
+  grid-area: b;
+  display: flex;
+  width: 150px;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+}
+
+#logo {
+  grid-area: logo;
+  height: 90px;
+  width: 272px;
+  padding-top: 109px;
+}
+
+.logo {
+  grid-area: logo;
+  height: 90px;
+  width: 272px;
+  padding-top: 109px;
+}
+
+#search {
+  grid-area: search;
+}
+
+.but {
+  margin: 11px 4px;
+  padding: 0px 16px;
+  height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #f2f2f2;
+  font-size: 14px;
+  color: #5F6368;
+  font-family: arial, sans-serif;
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+}
+
+input {
+  width: 490px;
+  height: 34px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+#search:hover {
+  box-shadow: 1px 1px 1px grey;
+}
+
+.but:hover {
+  border: 1px solid rgba(0, 0, 0, 0.226);
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+*:focus {
+  outline: none;
+}
+
+#footer {
+  display: grid;
+  bottom: 0;
+  position: absolute;
+  border-top: 1px solid #e4e4e4;
+  background: #f2f2f2;
+  line-height: 40px;
+  font-size: 14px;
+  grid-template-areas: "a b c . d e f";
+  grid-template-columns: 90px 90px 130px 1fr 60px 60px 70px;
+  grid-template-rows: 50px;
+  min-width: 100%;
+  color: #5f6368;
+}
+
+#container {
+  min-height: 100vh;
+  /* will cover the 100% of viewport */
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 480px) {
+  #container {
+    padding-bottom: 50px;
+    /* height of your footer */
+  }
+}
+#adv {
+  grid-area: a;
+}
+
+p {
+  font-family: arial, sans-serif;
+}
+
+#bus {
+  grid-area: b;
+}
+
+#how {
+  grid-area: c;
+}
+
+#priv {
+  grid-area: d;
+}
+
+#set {
+  grid-area: f;
+}
+
+#terms {
+  grid-area: e;
+}
+
+#logosubtext {
+  color: #4285f4;
+  font: 16px/16px roboto-regular, arial, sans-serif;
+  left: 215px;
+  position: relative;
+  top: 76px;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */
